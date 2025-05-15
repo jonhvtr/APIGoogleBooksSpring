@@ -1,0 +1,6 @@
+services:
+  backend:
+    image: backend-java
+    ports:
+      - "8081:8080"
+    restart: always
