@@ -1,0 +1,9 @@
+.mvn
+mvnw
+mvnw.cmd
+target/
+!target/*.jar
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
