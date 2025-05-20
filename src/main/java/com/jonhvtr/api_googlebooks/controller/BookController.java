@@ -1,6 +1,7 @@
 package com.jonhvtr.api_googlebooks.controller;
 
 import com.jonhvtr.api_googlebooks.service.BookService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
@@ -8,11 +9,12 @@ import java.io.IOException;
 @RestController
 @CrossOrigin(origins = "*")
 @RequestMapping("/api/books")
-public class BookController extends BookService {
+public class BookController {
+    @Autowired
+    private BookService bookService;
 
     @GetMapping("/search")
-    @Override
     public String searchBooks(@RequestParam String title) throws IOException, InterruptedException {
-        return super.searchBooks(title);
+        return bookService.searchBooks(title);
     }
 }
