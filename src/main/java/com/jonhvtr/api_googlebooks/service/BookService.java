@@ -1,7 +1,6 @@
 package com.jonhvtr.api_googlebooks.service;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
