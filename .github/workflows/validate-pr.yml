@@ -11,9 +11,9 @@ jobs:
       - name: Verificando nome da branch do PR
         run: |
           echo "Branch do PR: $GITHUB_HEAD_REF"
-          if [[ "$GITHUB_HEAD_REF" =~ ^(feature|bugfix|hotfix|chore)/.+$ ]]; then
+          if [[ "$GITHUB_HEAD_REF" =~ ^(feature|bugfix|hotfix|chore|release)/.+$ ]]; then
             echo "✅ Nome da branch está no padrão."
           else
-            echo "❌ ERRO: Nome da branch deve começar com feature/, bugfix/, hotfix/ ou chore/"
+            echo "❌ ERRO: Nome da branch deve começar com feature/, bugfix/, hotfix/, chore/, release/"
             exit 1
           fi
